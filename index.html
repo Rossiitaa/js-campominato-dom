@@ -15,19 +15,17 @@
         <header class="container-fluid">
             <h1 class="fs-1 text-center">Campo Minato</h1>
 
-            <div class="d-flex justify-content-around p-3">
-                <select name="Difficulty" id="diff-button">
+            <div class="p-3">
+                <select class="d-flex" name="Difficulty" id="diff-button">
                     <option value="0" id="value1">Beginner</option>
                     <option value="1" id="value2">Intermediate</option>
                     <option value="2" id="value3">Hard</option>
                 </select>
-                <button class="btn btn-danger" id="start-game">Play Now!</button>
-                <div>
-                    Your score is <span id="rating"></span>
-                </div>
+                <button class="mt-2 btn btn-danger" id="start-game">Play Now!</button>
+                <div id="rating"></div>
             </div>
         </header>
-        <main class="container p-5">
+        <main class="container p-2">
             <div class="clearfix" id="grid-dinamic">
             </div>
         </main>

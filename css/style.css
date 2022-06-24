@@ -29,6 +29,10 @@ div#grid-dinamic {
     display: table;
 } 
 
+.d-flex {
+    display: flex;
+}
+
 .square {
     border: 2px solid rgb(0, 0, 0);
     cursor: crosshair;
@@ -39,6 +43,7 @@ div#grid-dinamic {
     justify-content: center;
     align-items: center;
 }
+
 
 /* calcolo box */
 .rs_box_consegna {
