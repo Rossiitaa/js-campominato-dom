@@ -112,10 +112,34 @@
         for (let i = 0; i < 81; i++) {
             const newBox = createNewBox();
             newBox.classList.add('rs_box_consegna_int');
-            newBox.addEventListener('click' , function(){
-            newBox.classList.toggle('good');
-            console.log(newBox.innerHTML);
-            });
+            if (bombs.includes(i)) {
+                newBox.classList.add('bomb');
+                }
+    
+        newBox.addEventListener('click' , function(){
+            if (!lose && !win) {
+    
+                if (newBox.classList.contains('bomb')) {
+                    newBox.classList.add('error');
+                    lose = true;
+                    console.log('You lost, you’ll be lucky again!');
+                    score.innerHTML = `You lost, you’ll be lucky again! SCORE: ${counter}`;
+    
+                    } else {
+    
+                        newBox.classList.add('good');
+                        console.log(newBox.innerHTML);
+                        counter++;
+                        }
+                        if (counter == (81 - 16)) {
+    
+                            win = true;
+                            console.log('You’re a champion, you win!');
+                            score.innerHTML = `You’re a champion, you win! SCORE: ${counter}`;
+        
+                        }
+                    }
+                });
             newBox.innerHTML = i;
             dinamicGrid.append(newBox);
         }
@@ -129,10 +153,34 @@
         for (let i = 0; i < 49; i++) {
             const newBox = createNewBox();
             newBox.classList.add('rs_box_consegna_diff');
-            newBox.addEventListener('click' , function(){
-            newBox.classList.toggle('good');
-            console.log(newBox.innerHTML);
-            });
+            if (bombs.includes(i)) {
+                newBox.classList.add('bomb');
+                }
+    
+        newBox.addEventListener('click' , function(){
+            if (!lose && !win) {
+    
+                if (newBox.classList.contains('bomb')) {
+                    newBox.classList.add('error');
+                    lose = true;
+                    console.log('You lost, you’ll be lucky again!');
+                    score.innerHTML = `You lost, you’ll be lucky again! SCORE: ${counter}`;
+    
+                    } else {
+    
+                        newBox.classList.add('good');
+                        console.log(newBox.innerHTML);
+                        counter++;
+                        }
+                        if (counter == (49 - 16)) {
+    
+                            win = true;
+                            console.log('You’re a champion, you win!');
+                            score.innerHTML = `You’re a champion, you win! SCORE: ${counter}`;
+        
+                        }
+                    }
+                });
             newBox.innerHTML = i;
             dinamicGrid.append(newBox);
         }
