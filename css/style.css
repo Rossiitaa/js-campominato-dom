@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    background-color: #fff;
+}
+
+div#grid-dinamic {
+    background-color: rgb(0, 9, 110);
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    border: 5px solid rgb(0, 0, 0);
+
+}
+
+.azzurro {
+    background-color: aqua;
+}
+
+.red {
+    background-color: red;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table;
+} 
+
+.square {
+    border: 2px solid rgb(0, 0, 0);
+    cursor: crosshair;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* calcolo box */
+.rs_box_consegna {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+}
+
+.rs_box_consegna_int {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.rs_box_consegna_diff {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+/* sfondo animato */
+.box {
+    background: url(https://res.cloudinary.com/practicaldev/image/fetch/s--BuPz-p40--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    animation: animazione 100s linear infinite;
+}
+
+@keyframes animazione {
+    100%{
+        background-position: 0px -3000px;
+    }
+}
